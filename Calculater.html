@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///E:/WEB%20Project/calculater%20Project/Index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./Calculater_files/style.css">
+    <div class="Parent">
+        <div id="FirstButton">
+            <input type="text" id="Output" onclick="getInsert(value)">
+        </div>
+        <div id="box">
+            <div class="button1" onmousemove="getOver()">
+                <button value="7" id="number" onclick="getInsert(7)">7</button>
+                <button value="8" id="number" onclick="getInsert(8)" class="style">8</button>
+                <button value="9" id="number" onclick="getInsert(9)" class="style">9</button>
+
+                <button value="/" id="number" onclick="ClearScreen(&#39;&#39;)" class="style">Ac</button>
+            </div>
+
+            <div class="button1">
+                <button value="4" id="number" onclick="getInsert(4)" class="style">4</button>
+                <button value="5" id="number" onclick="getInsert(5)" class="style">5</button>
+                <button value="6" id="number" onclick="getInsert(6)" class="style">6</button>
+                <button value="*" id="number" onclick="getInsert(&#39;*&#39;)" class="style">*</button>
+            </div>
+            <div class="button1">
+                <button value="1" id="number" onclick="getInsert(1)" class="style">1</button>
+                <button value="2" id="number" onclick="getInsert(2)" class="style">2</button>
+                <button value="3" id="number" onclick="getInsert(3)" class="style">3</button>
+                <button value="-" id="number" onclick="getInsert(&#39;-&#39;)" class="style">-</button>
+            </div>
+            <div class="button1">
+                <button value="." id="number" onclick="getInsert(&#39;/&#39;)" class="style">/</button>
+                <button value="0" id="number" onclick="getInsert(0)" class="style">0</button>
+                <button value="=" id="number" onclick="getCalculate(&#39;&#39;)" class="style">=</button>
+                <button value="+" id="number" onclick="getInsert(&#39;+&#39;)" class="style">+</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function getInsert(value) {
+            document.getElementById("Output").value += value;
+        }
+
+        function ClearScreen() {
+            document.getElementById("Output").value = " ";
+        }
+
+        function getCalculate() {
+            var a = document.getElementById("Output").value;
+            var b = eval(a);
+            document.getElementById("Output").value = b;
+        }
+    </script>
+
+
+</body></html>
